@@ -25,13 +25,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "XashyDesign | Futuristic Design Studio",
+  title: "XashyDesign",
   description: "Creative design studio specializing in futuristic digital experiences, overlay livestream, karakter animasi, dan desain grafis profesional.",
   keywords: ["design grafis", "overlay livestream", "karakter animasi", "desain logo", "XashyDesign"],
-  authors: [{ name: "XashyDesign" }],
+  authors: [{ name: "Xashy Hsuband" }],
   creator: "XashyDesign",
   openGraph: {
-    title: "XashyDesign | Futuristic Design Studio",
+    title: "XashyDesign",
     description: "Creative design studio specializing in futuristic digital experiences",
     url: "https://xashydesign.vercel.app",
     siteName: "XashyDesign",

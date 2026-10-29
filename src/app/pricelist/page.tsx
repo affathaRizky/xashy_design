@@ -1,10 +1,22 @@
+'use client';
+
 import Link from "next/link";
+
+// Fungsi helper untuk buka WhatsApp secara natural (anti-blokir TikTok)
+const handleWhatsAppClick = (projectName: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    const message = `Halo Min, mau order project ${projectName} dong!`;
+    const whatsappUrl = `https://wa.me/6283171099307?text=${encodeURIComponent(message)}`;
+
+    // Menggunakan window.open yang lebih dipercaya oleh browser in-app
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+};
 
 export default function PriceListPage() {
     return (
         <main className="min-h-screen relative overflow-x-hidden bg-metal-dark text-gray-200 font-['Inter']">
 
-            {/* Back Button (TETAP PAKAI Link KARENA INI INTERNAL ROUTE) */}
+            {/* Back Button */}
             <Link
                 href="/"
                 className="fixed top-4 left-4 z-50 flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 sm:top-6 sm:left-6 bg-metal-dark/90 backdrop-blur-md border border-electric-blue/30 rounded-sm text-gray-400 hover:text-electric-blue hover:border-electric-blue/50 hover:shadow-[0_0_15px_rgba(0,212,255,0.3)] transition-all duration-300 group"
@@ -97,7 +109,7 @@ export default function PriceListPage() {
                                     </div>
                                 </div>
 
-                                {/* POINT TERAKHIR + TOMBOL ORDER (MENGGUNAKAN REDIRECT PAGE) */}
+                                {/* POINT TERAKHIR + TOMBOL ORDER (BUTTON onClick) */}
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                                     <div className="flex items-start gap-3 flex-1">
                                         <svg className="w-5 h-5 text-electric-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,15 +119,15 @@ export default function PriceListPage() {
                                             <span className="font-['Rajdhani'] font-semibold text-white">Landscape/Potrait</span>
                                         </div>
                                     </div>
-                                    <Link
-                                        href={`/redirect/whatsapp?project=${encodeURIComponent("Overlay Live Stream Basic")}`}
-                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:px-6 sm:py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                    <button
+                                        onClick={(e) => handleWhatsAppClick("Overlay Live Stream Basic", e)}
+                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:px-6 sm:py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                                     >
                                         ORDER SEKARANG
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </Link>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +172,7 @@ export default function PriceListPage() {
                                     </div>
                                 </div>
 
-                                {/* POINT TERAKHIR + TOMBOL ORDER (MENGGUNAKAN REDIRECT PAGE) */}
+                                {/* POINT TERAKHIR + TOMBOL ORDER (BUTTON onClick) */}
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                                     <div className="flex items-start gap-3 flex-1">
                                         <svg className="w-5 h-5 text-electric-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -171,15 +183,15 @@ export default function PriceListPage() {
                                             <span className="text-gray-500 ml-2">(Berlaku Kelipatan)</span>
                                         </div>
                                     </div>
-                                    <Link
-                                        href={`/redirect/whatsapp?project=${encodeURIComponent("Overlay Live Stream Advanced")}`}
-                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:px-6 sm:py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                    <button
+                                        onClick={(e) => handleWhatsAppClick("Overlay Live Stream Advanced", e)}
+                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:px-6 sm:py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                                     >
                                         ORDER SEKARANG
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </Link>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -224,7 +236,7 @@ export default function PriceListPage() {
                                     </div>
                                 </div>
 
-                                {/* POINT TERAKHIR + TOMBOL ORDER (MENGGUNAKAN REDIRECT PAGE) */}
+                                {/* POINT TERAKHIR + TOMBOL ORDER (BUTTON onClick) */}
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                                     <div className="flex items-start gap-3 flex-1">
                                         <svg className="w-5 h-5 text-electric-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -235,15 +247,15 @@ export default function PriceListPage() {
                                             <span className="text-gray-500 ml-2">(Berlaku Kelipatan)</span>
                                         </div>
                                     </div>
-                                    <Link
-                                        href={`/redirect/whatsapp?project=${encodeURIComponent("Overlay Live Stream Premium")}`}
-                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:px-6 sm:py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                    <button
+                                        onClick={(e) => handleWhatsAppClick("Overlay Live Stream Premium", e)}
+                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:px-6 sm:py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                                     >
                                         ORDER SEKARANG
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </Link>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -275,15 +287,15 @@ export default function PriceListPage() {
                                 </div>
                                 <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                     <span className="font-['Orbitron'] font-bold text-xl sm:text-2xl text-electric-blue">IDR 40.000,-</span>
-                                    <Link
-                                        href={`/redirect/whatsapp?project=${encodeURIComponent("Gerakan Karakter Animasi (Random)")}`}
-                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                    <button
+                                        onClick={(e) => handleWhatsAppClick("Gerakan Karakter Animasi (Random)", e)}
+                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                                     >
                                         ORDER
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </Link>
+                                    </button>
                                 </div>
                             </div>
 
@@ -302,15 +314,15 @@ export default function PriceListPage() {
                                 </div>
                                 <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                     <span className="font-['Orbitron'] font-bold text-xl sm:text-2xl text-electric-blue">IDR 55.000,-</span>
-                                    <Link
-                                        href={`/redirect/whatsapp?project=${encodeURIComponent("Gerakan Karakter Animasi (Request)")}`}
-                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                    <button
+                                        onClick={(e) => handleWhatsAppClick("Gerakan Karakter Animasi (Request)", e)}
+                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                                     >
                                         ORDER
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </Link>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -366,15 +378,15 @@ export default function PriceListPage() {
                                     </div>
                                     <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue">IDR 40.000,-</span>
-                                        <Link
-                                            href={`/redirect/whatsapp?project=${encodeURIComponent("Overlay Photo")}`}
-                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                        <button
+                                            onClick={(e) => handleWhatsAppClick("Overlay Photo", e)}
+                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                                         >
                                             ORDER
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -393,15 +405,15 @@ export default function PriceListPage() {
                                     </div>
                                     <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue">IDR 40.000,-</span>
-                                        <Link
-                                            href={`/redirect/whatsapp?project=${encodeURIComponent("Desain Logo")}`}
-                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                        <button
+                                            onClick={(e) => handleWhatsAppClick("Desain Logo", e)}
+                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                                         >
                                             ORDER
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -421,15 +433,15 @@ export default function PriceListPage() {
                                     </div>
                                     <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue whitespace-nowrap">IDR 35.000,-</span>
-                                        <Link
-                                            href={`/redirect/whatsapp?project=${encodeURIComponent("Social Media Desain Service")}`}
-                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                        <button
+                                            onClick={(e) => handleWhatsAppClick("Social Media Desain Service", e)}
+                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                                         >
                                             ORDER
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -449,15 +461,15 @@ export default function PriceListPage() {
                                     </div>
                                     <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue whitespace-nowrap">IDR 50.000,-</span>
-                                        <Link
-                                            href={`/redirect/whatsapp?project=${encodeURIComponent("Stream Branding Overlay Video")}`}
-                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                        <button
+                                            onClick={(e) => handleWhatsAppClick("Stream Branding Overlay Video", e)}
+                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                                         >
                                             ORDER
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -476,15 +488,15 @@ export default function PriceListPage() {
                                     </div>
                                     <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue whitespace-nowrap">IDR 15.000,-</span>
-                                        <Link
-                                            href={`/redirect/whatsapp?project=${encodeURIComponent("Desain CV")}`}
-                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                        <button
+                                            onClick={(e) => handleWhatsAppClick("Desain CV", e)}
+                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap cursor-pointer"
                                         >
                                             ORDER
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

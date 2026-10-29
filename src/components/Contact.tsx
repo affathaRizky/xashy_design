@@ -1,3 +1,13 @@
+'use client';
+
+import Link from "next/link";
+
+// Fungsi helper untuk buka link eksternal secara natural (anti-blokir TikTok)
+const handleExternalClick = (url: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open(url, '_blank', 'noopener,noreferrer');
+};
+
 export default function Contact() {
     return (
         <section id="contact" className="relative py-32 overflow-hidden bg-metal-dark">
@@ -24,11 +34,9 @@ export default function Contact() {
                 {/* Contact Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                     {/* Card 1: WhatsApp */}
-                    <a
-                        href="/redirect/whatsapp?project=nya"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-green-500/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden"
+                    <button
+                        onClick={(e) => handleExternalClick(`https://wa.me/6283171099307?text=${encodeURIComponent('Halo Min, mau order dong!')}`, e)}
+                        className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-green-500/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden cursor-pointer text-left w-full"
                     >
                         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="flex items-start gap-5">
@@ -47,14 +55,12 @@ export default function Contact() {
                                 </span>
                             </div>
                         </div>
-                    </a>
+                    </button>
 
                     {/* Card 2: Instagram */}
-                    <a
-                        href="/redirect/instagram"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-pink-500/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden"
+                    <button
+                        onClick={(e) => handleExternalClick('https://www.instagram.com/_xsdesign/', e)}
+                        className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-pink-500/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden cursor-pointer text-left w-full"
                     >
                         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="flex items-start gap-5">
@@ -73,14 +79,12 @@ export default function Contact() {
                                 </span>
                             </div>
                         </div>
-                    </a>
+                    </button>
 
                     {/* Card 3: TikTok */}
-                    <a
-                        href="/redirect/tiktok"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden"
+                    <button
+                        onClick={(e) => handleExternalClick('https://tiktok.com/@urfavsashy_', e)}
+                        className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden cursor-pointer text-left w-full"
                     >
                         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="flex items-start gap-5">
@@ -99,7 +103,7 @@ export default function Contact() {
                                 </span>
                             </div>
                         </div>
-                    </a>
+                    </button>
 
                     {/* Card 4: Working Hours */}
                     <div className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-gray-500/50 transition-all duration-500 overflow-hidden">

@@ -13,7 +13,7 @@ export default function PriceListPage() {
             {/* Back Button (Fixed Top Left) */}
             <Link
                 href="/"
-                className="fixed top-24 left-6 z-50 flex items-center gap-2 px-4 py-2 bg-metal-dark/80 backdrop-blur-sm border border-gray-700/50 rounded-sm text-gray-400 hover:text-electric-blue hover:border-electric-blue/50 transition-all duration-300 group"
+                className="fixed top-6 left-6 z-50 flex items-center gap-2 px-4 py-2 bg-metal-dark/90 backdrop-blur-md border border-electric-blue/30 rounded-sm text-gray-400 hover:text-electric-blue hover:border-electric-blue/50 hover:shadow-[0_0_15px_rgba(0,212,255,0.3)] transition-all duration-300 group sm:top-24"
             >
                 <svg className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

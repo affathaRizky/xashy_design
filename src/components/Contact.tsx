@@ -25,7 +25,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                     {/* Card 1: WhatsApp */}
                     <a
-                        href="https://wa.me/6283171099307?text=Permisi%20kak%20mau%2C%20mau%20order%20dong%21"
+                        href="https://wa.me/6283171099307"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-green-500/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden"

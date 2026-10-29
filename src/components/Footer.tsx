@@ -79,7 +79,7 @@ export default function Footer() {
                     {/* Bottom Border */}
                     <div className="pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-gray-500 text-sm font-rajdhani">
-                            &copy; {new Date().getFullYear()} XashyDesign. All rights reserved.
+                            &copy; 2026 XashyDesign. All rights reserved.
                         </p>
                         <div className="flex gap-6 text-sm">
                             <a href="#" className="text-gray-500 hover:text-electric-blue transition-colors font-rajdhani">Privacy Policy</a>

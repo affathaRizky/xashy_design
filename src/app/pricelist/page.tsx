@@ -10,10 +10,10 @@ export default function PriceListPage() {
     return (
         <main className="min-h-screen relative overflow-x-hidden bg-metal-dark text-gray-200 font-['Inter']">
 
-            {/* Back Button (Fixed Top Left) */}
+            {/* Back Button (Optimized for Mobile) */}
             <Link
                 href="/"
-                className="fixed top-6 left-6 z-50 flex items-center gap-2 px-4 py-2 bg-metal-dark/90 backdrop-blur-md border border-electric-blue/30 rounded-sm text-gray-400 hover:text-electric-blue hover:border-electric-blue/50 hover:shadow-[0_0_15px_rgba(0,212,255,0.3)] transition-all duration-300 group sm:top-24"
+                className="fixed top-4 left-4 z-50 flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 sm:top-6 sm:left-6 bg-metal-dark/90 backdrop-blur-md border border-electric-blue/30 rounded-sm text-gray-400 hover:text-electric-blue hover:border-electric-blue/50 hover:shadow-[0_0_15px_rgba(0,212,255,0.3)] transition-all duration-300 group"
             >
                 <svg className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -22,12 +22,12 @@ export default function PriceListPage() {
             </Link>
 
             {/* Main Pricelist Container */}
-            <div className="relative min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+            <div className="relative min-h-screen py-12 sm:py-16 px-5 sm:px-6 lg:px-8">
                 {/* Background Effects */}
                 <div className="fixed inset-0 pointer-events-none">
                     <div className="absolute inset-0 bg-metal-dark"></div>
 
-                    {/* Diagonal Lines (top-left) - Diubah ke electric blue subtle */}
+                    {/* Diagonal Lines (top-left) */}
                     <div className="absolute top-0 left-0 w-[600px] h-[600px] overflow-hidden opacity-20">
                         <div className="absolute -top-1/2 -left-1/4 w-[200%] h-[3px] bg-gradient-to-r from-transparent via-electric-blue/40 to-transparent transform rotate-[-30deg]"></div>
                         <div className="absolute -top-1/2 -left-1/4 w-[200%] h-[1px] bg-gradient-to-r from-transparent via-electric-blue/30 to-transparent transform rotate-[-30deg] translate-y-6"></div>
@@ -46,49 +46,49 @@ export default function PriceListPage() {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 max-w-4xl mx-auto pt-10">
+                <div className="relative z-10 max-w-4xl mx-auto pt-8 sm:pt-10">
 
                     {/* Header Logo Section */}
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-12 sm:mb-16">
                         <div className="inline-block mb-4">
-                            <h1 className="font-['Orbitron'] font-black text-5xl sm:text-6xl md:text-7xl tracking-wider metallic-text drop-shadow-[0_0_20px_rgba(0,212,255,0.3)]">
+                            <h1 className="font-['Orbitron'] font-black text-4xl sm:text-6xl md:text-7xl tracking-wider metallic-text drop-shadow-[0_0_20px_rgba(0,212,255,0.3)] leading-tight">
                                 XASHYDESIGN
                             </h1>
                         </div>
                         <div className="relative inline-block">
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-electric-blue/40 to-transparent h-[1px] top-1/2 -translate-y-1/2"></div>
-                            <span className="relative px-6 font-['Orbitron'] font-bold text-xl sm:text-2xl tracking-[0.3em] text-electric-blue bg-metal-dark electric-glow-text">
+                            <span className="relative px-4 py-1 sm:px-6 font-['Orbitron'] font-bold text-sm sm:text-xl tracking-[0.2em] sm:tracking-[0.3em] text-electric-blue bg-metal-dark electric-glow-text rounded-sm">
                                 PRICELIST
                             </span>
                         </div>
                     </div>
 
                     {/* ==================== SECTION: OVERLAY LIVE STREAM ==================== */}
-                    <div className="mb-16">
-                        <div className="flex items-center justify-center gap-4 mb-10">
+                    <div className="mb-12 sm:mb-16">
+                        <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
                             <div className="w-2 h-2 bg-electric-blue rounded-full animate-pulse"></div>
-                            <h2 className="font-['Orbitron'] font-bold text-2xl sm:text-3xl text-white tracking-wider">
+                            <h2 className="font-['Orbitron'] font-bold text-xl sm:text-3xl text-white tracking-wider text-center leading-snug">
                                 OVERLAY LIVE STREAM
                             </h2>
                             <div className="w-2 h-2 bg-electric-blue rounded-full animate-pulse"></div>
                         </div>
 
                         {/* BASIC TIER */}
-                        <div className="mb-12">
-                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-                                <div className="flex items-center gap-4">
-                                    <h3 className="font-['Orbitron'] font-black text-3xl sm:text-4xl metallic-text">
+                        <div className="mb-10 sm:mb-12">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-6">
+                                <div className="flex items-center gap-3">
+                                    <h3 className="font-['Orbitron'] font-black text-2xl sm:text-4xl metallic-text">
                                         BASIC
                                     </h3>
-                                    <svg className="w-10 h-10 text-electric-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-8 h-8 sm:w-10 sm:h-10 text-electric-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
                                 </div>
-                                <div className="text-center sm:text-right">
-                                    <span className="font-['Orbitron'] font-bold text-3xl text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">IDR 50.000,-</span>
+                                <div className="text-left sm:text-right w-full sm:w-auto border-t sm:border-0 border-gray-800 pt-3 sm:pt-0">
+                                    <span className="font-['Orbitron'] font-bold text-2xl sm:text-3xl text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">IDR 50.000,-</span>
                                 </div>
                             </div>
-                            <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl">
+                            <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                                 Untuk desain sederhana, clean, minimalis. Tanpa karakter animasi.
                             </p>
 
@@ -103,8 +103,8 @@ export default function PriceListPage() {
                                     </div>
                                 </div>
 
-                                {/* POINT TERAKHIR + TOMBOL ORDER SEJAJAR */}
-                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                {/* POINT TERAKHIR + TOMBOL ORDER */}
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                                     <div className="flex items-start gap-3 flex-1">
                                         <svg className="w-5 h-5 text-electric-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -117,7 +117,7 @@ export default function PriceListPage() {
                                         href={getWaLink("Overlay Live Stream Basic")}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 px-6 py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:px-6 sm:py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
                                     >
                                         ORDER SEKARANG
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,24 +128,24 @@ export default function PriceListPage() {
                             </div>
                         </div>
 
-                        <div className="w-full h-px bg-gradient-to-r from-transparent via-electric-blue/30 to-transparent my-12"></div>
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-electric-blue/30 to-transparent my-10 sm:my-12"></div>
 
                         {/* ADVANCED TIER */}
-                        <div className="mb-12">
-                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-                                <div className="flex items-center gap-4">
-                                    <h3 className="font-['Orbitron'] font-black text-3xl sm:text-4xl metallic-text">
+                        <div className="mb-10 sm:mb-12">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-6">
+                                <div className="flex items-center gap-3">
+                                    <h3 className="font-['Orbitron'] font-black text-2xl sm:text-4xl metallic-text">
                                         ADVANCED
                                     </h3>
-                                    <svg className="w-10 h-10 text-electric-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-8 h-8 sm:w-10 sm:h-10 text-electric-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
                                 </div>
-                                <div className="text-center sm:text-right">
-                                    <span className="font-['Orbitron'] font-bold text-3xl text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">IDR 85.000,-</span>
+                                <div className="text-left sm:text-right w-full sm:w-auto border-t sm:border-0 border-gray-800 pt-3 sm:pt-0">
+                                    <span className="font-['Orbitron'] font-bold text-2xl sm:text-3xl text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">IDR 85.000,-</span>
                                 </div>
                             </div>
-                            <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl">
+                            <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                                 Untuk desain dengan detail tambahan, 1 karakter animasi ornamen dan efek visual yang menarik.
                             </p>
 
@@ -168,8 +168,8 @@ export default function PriceListPage() {
                                     </div>
                                 </div>
 
-                                {/* POINT TERAKHIR + TOMBOL ORDER SEJAJAR */}
-                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                {/* POINT TERAKHIR + TOMBOL ORDER */}
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                                     <div className="flex items-start gap-3 flex-1">
                                         <svg className="w-5 h-5 text-electric-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -183,7 +183,7 @@ export default function PriceListPage() {
                                         href={getWaLink("Overlay Live Stream Advanced")}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 px-6 py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:px-6 sm:py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
                                     >
                                         ORDER SEKARANG
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,24 +194,24 @@ export default function PriceListPage() {
                             </div>
                         </div>
 
-                        <div className="w-full h-px bg-gradient-to-r from-transparent via-electric-blue/30 to-transparent my-12"></div>
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-electric-blue/30 to-transparent my-10 sm:my-12"></div>
 
                         {/* PREMIUM TIER */}
-                        <div className="mb-12">
-                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-                                <div className="flex items-center gap-4">
-                                    <h3 className="font-['Orbitron'] font-black text-3xl sm:text-4xl metallic-text">
+                        <div className="mb-10 sm:mb-12">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-6">
+                                <div className="flex items-center gap-3">
+                                    <h3 className="font-['Orbitron'] font-black text-2xl sm:text-4xl metallic-text">
                                         PREMIUM
                                     </h3>
-                                    <svg className="w-10 h-10 text-electric-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-8 h-8 sm:w-10 sm:h-10 text-electric-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
                                 </div>
-                                <div className="text-center sm:text-right">
-                                    <span className="font-['Orbitron'] font-bold text-3xl text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">IDR 125.000,-</span>
+                                <div className="text-left sm:text-right w-full sm:w-auto border-t sm:border-0 border-gray-800 pt-3 sm:pt-0">
+                                    <span className="font-['Orbitron'] font-bold text-2xl sm:text-3xl text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">IDR 125.000,-</span>
                                 </div>
                             </div>
-                            <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl">
+                            <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                                 Untuk desain kompleks dengan banyak detail, efek 3D, 1 karakter animasi, background animasi, dengan komposisi khusus.
                             </p>
 
@@ -234,8 +234,8 @@ export default function PriceListPage() {
                                     </div>
                                 </div>
 
-                                {/* POINT TERAKHIR + TOMBOL ORDER SEJAJAR */}
-                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                {/* POINT TERAKHIR + TOMBOL ORDER */}
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                                     <div className="flex items-start gap-3 flex-1">
                                         <svg className="w-5 h-5 text-electric-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -249,7 +249,7 @@ export default function PriceListPage() {
                                         href={getWaLink("Overlay Live Stream Premium")}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 px-6 py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:px-6 sm:py-2.5 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-sm tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
                                     >
                                         ORDER SEKARANG
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -262,34 +262,36 @@ export default function PriceListPage() {
                     </div>
 
                     {/* ==================== SECTION: KARAKTER ANIMASI ABSEN ==================== */}
-                    <div className="mb-16">
-                        <div className="flex items-center justify-center gap-4 mb-10">
+                    <div className="mb-12 sm:mb-16">
+                        <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
                             <div className="w-2 h-2 bg-electric-blue rounded-full animate-pulse"></div>
-                            <h2 className="font-['Orbitron'] font-bold text-2xl sm:text-3xl text-white tracking-wider">
+                            <h2 className="font-['Orbitron'] font-bold text-xl sm:text-3xl text-white tracking-wider text-center leading-snug">
                                 KARAKTER ANIMASI ABSEN
                             </h2>
                             <div className="w-2 h-2 bg-electric-blue rounded-full animate-pulse"></div>
                         </div>
 
-                        <div className="space-y-8">
+                        <div className="space-y-6 sm:space-y-8">
                             {/* Item 1 */}
-                            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 group p-4 rounded-sm bg-metal-gray/30 border border-gray-800/50 hover:border-electric-blue/50 transition-all duration-300">
-                                <div className="flex items-center gap-4 flex-1 justify-center sm:justify-start">
-                                    <svg className="w-6 h-6 text-electric-blue flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                                    </svg>
-                                    <div className="text-center sm:text-left">
-                                        <h3 className="font-['Rajdhani'] font-bold text-xl sm:text-2xl text-white">GERAKAN KARAKTER ANIMASI</h3>
-                                        <p className="font-['Rajdhani'] text-gray-500 text-sm">(RANDOM)</p>
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 group p-5 sm:p-4 rounded-sm bg-metal-gray/30 border border-gray-800/50 hover:border-electric-blue/50 transition-all duration-300">
+                                <div className="flex items-center gap-4 w-full sm:flex-1 justify-between sm:justify-start">
+                                    <div className="flex items-center gap-4">
+                                        <svg className="w-6 h-6 text-electric-blue flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                        </svg>
+                                        <div className="text-left">
+                                            <h3 className="font-['Rajdhani'] font-bold text-lg sm:text-2xl text-white">GERAKAN KARAKTER ANIMASI</h3>
+                                            <p className="font-['Rajdhani'] text-gray-500 text-sm">(RANDOM)</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="flex flex-col sm:items-end gap-3 text-center sm:text-right w-full sm:w-auto">
-                                    <span className="font-['Orbitron'] font-bold text-2xl text-electric-blue">IDR 40.000,-</span>
+                                <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
+                                    <span className="font-['Orbitron'] font-bold text-xl sm:text-2xl text-electric-blue">IDR 40.000,-</span>
                                     <Link
                                         href={getWaLink("Gerakan Karakter Animasi (Random)")}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
                                     >
                                         ORDER
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -299,26 +301,26 @@ export default function PriceListPage() {
                                 </div>
                             </div>
 
-                            <div className="w-full h-px bg-gradient-to-r from-transparent via-electric-blue/20 to-transparent"></div>
-
                             {/* Item 2 */}
-                            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 group p-4 rounded-sm bg-metal-gray/30 border border-gray-800/50 hover:border-electric-blue/50 transition-all duration-300">
-                                <div className="flex items-center gap-4 flex-1 justify-center sm:justify-start">
-                                    <svg className="w-6 h-6 text-electric-blue flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                                    </svg>
-                                    <div className="text-center sm:text-left">
-                                        <h3 className="font-['Rajdhani'] font-bold text-xl sm:text-2xl text-white">GERAKAN KARAKTER ANIMASI</h3>
-                                        <p className="font-['Rajdhani'] text-gray-500 text-sm">(REQUEST)</p>
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 group p-5 sm:p-4 rounded-sm bg-metal-gray/30 border border-gray-800/50 hover:border-electric-blue/50 transition-all duration-300">
+                                <div className="flex items-center gap-4 w-full sm:flex-1 justify-between sm:justify-start">
+                                    <div className="flex items-center gap-4">
+                                        <svg className="w-6 h-6 text-electric-blue flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                        </svg>
+                                        <div className="text-left">
+                                            <h3 className="font-['Rajdhani'] font-bold text-lg sm:text-2xl text-white">GERAKAN KARAKTER ANIMASI</h3>
+                                            <p className="font-['Rajdhani'] text-gray-500 text-sm">(REQUEST)</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="flex flex-col sm:items-end gap-3 text-center sm:text-right w-full sm:w-auto">
-                                    <span className="font-['Orbitron'] font-bold text-2xl text-electric-blue">IDR 55.000,-</span>
+                                <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
+                                    <span className="font-['Orbitron'] font-bold text-xl sm:text-2xl text-electric-blue">IDR 55.000,-</span>
                                     <Link
                                         href={getWaLink("Gerakan Karakter Animasi (Request)")}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
                                     >
                                         ORDER
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -330,7 +332,7 @@ export default function PriceListPage() {
                         </div>
 
                         {/* Info Notes */}
-                        <div className="mt-10 space-y-4 max-w-2xl mx-auto">
+                        <div className="mt-8 sm:mt-10 space-y-4">
                             <div className="flex items-start gap-3">
                                 <svg className="w-5 h-5 text-electric-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -356,35 +358,35 @@ export default function PriceListPage() {
                     </div>
 
                     {/* ==================== SECTION: DESAIN LAINNYA ==================== */}
-                    <div className="mb-16">
-                        <div className="flex items-center justify-center gap-4 mb-10">
+                    <div className="mb-12 sm:mb-16">
+                        <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
                             <div className="w-2 h-2 bg-electric-blue rounded-full animate-pulse"></div>
-                            <h2 className="font-['Orbitron'] font-bold text-2xl sm:text-3xl text-white tracking-wider">
+                            <h2 className="font-['Orbitron'] font-bold text-xl sm:text-3xl text-white tracking-wider text-center leading-snug">
                                 DESAIN LAINNYA
                             </h2>
                             <div className="w-2 h-2 bg-electric-blue rounded-full animate-pulse"></div>
                         </div>
 
-                        <div className="space-y-6">
+                        <div className="space-y-5 sm:space-y-6">
                             {/* Overlay Photo */}
-                            <div className="bg-metal-gray/30 border border-gray-800/50 rounded-sm p-6 hover:border-electric-blue/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.05)] transition-all duration-300 group">
-                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                                    <div className="flex items-start sm:items-center gap-4 flex-1">
+                            <div className="bg-metal-gray/30 border border-gray-800/50 rounded-sm p-5 sm:p-6 hover:border-electric-blue/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.05)] transition-all duration-300 group">
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6">
+                                    <div className="flex items-start sm:items-center gap-4 w-full sm:flex-1">
                                         <svg className="w-6 h-6 text-electric-blue flex-shrink-0 mt-1 sm:mt-0" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                                         </svg>
                                         <div>
-                                            <h3 className="font-['Rajdhani'] font-bold text-xl text-white">OVERLAY PHOTO</h3>
+                                            <h3 className="font-['Rajdhani'] font-bold text-lg sm:text-xl text-white">OVERLAY PHOTO</h3>
                                             <p className="text-gray-500 text-xs font-['Rajdhani'] tracking-wider">ALL DESAIN BEBAS REQUEST</p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto">
+                                    <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue">IDR 40.000,-</span>
                                         <Link
                                             href={getWaLink("Overlay Photo")}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
                                         >
                                             ORDER
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -396,24 +398,24 @@ export default function PriceListPage() {
                             </div>
 
                             {/* Desain Logo */}
-                            <div className="bg-metal-gray/30 border border-gray-800/50 rounded-sm p-6 hover:border-electric-blue/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.05)] transition-all duration-300 group">
-                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                                    <div className="flex items-start sm:items-center gap-4 flex-1">
+                            <div className="bg-metal-gray/30 border border-gray-800/50 rounded-sm p-5 sm:p-6 hover:border-electric-blue/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.05)] transition-all duration-300 group">
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6">
+                                    <div className="flex items-start sm:items-center gap-4 w-full sm:flex-1">
                                         <svg className="w-6 h-6 text-electric-blue flex-shrink-0 mt-1 sm:mt-0" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                                         </svg>
                                         <div>
-                                            <h3 className="font-['Rajdhani'] font-bold text-xl text-white">DESAIN LOGO</h3>
+                                            <h3 className="font-['Rajdhani'] font-bold text-lg sm:text-xl text-white">DESAIN LOGO</h3>
                                             <p className="text-gray-500 text-xs font-['Rajdhani'] tracking-wider">ALL DESAIN BEBAS REQUEST</p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto">
+                                    <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue">IDR 40.000,-</span>
                                         <Link
                                             href={getWaLink("Desain Logo")}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
                                         >
                                             ORDER
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -425,25 +427,25 @@ export default function PriceListPage() {
                             </div>
 
                             {/* Social Media Desain Service */}
-                            <div className="bg-metal-gray/30 border border-gray-800/50 rounded-sm p-6 hover:border-electric-blue/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.05)] transition-all duration-300 group">
-                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                                    <div className="flex items-start sm:items-center gap-4 flex-1">
+                            <div className="bg-metal-gray/30 border border-gray-800/50 rounded-sm p-5 sm:p-6 hover:border-electric-blue/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.05)] transition-all duration-300 group">
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6">
+                                    <div className="flex items-start sm:items-center gap-4 w-full sm:flex-1">
                                         <svg className="w-6 h-6 text-electric-blue flex-shrink-0 mt-1 sm:mt-0" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                                         </svg>
                                         <div>
-                                            <h3 className="font-['Rajdhani'] font-bold text-xl text-white">SOCIAL MEDIA DESAIN SERVICE</h3>
+                                            <h3 className="font-['Rajdhani'] font-bold text-lg sm:text-xl text-white">SOCIAL MEDIA DESAIN SERVICE</h3>
                                             <p className="text-gray-500 text-xs font-['Rajdhani'] tracking-wider mb-2">BEBAS REQUEST</p>
-                                            <p className="text-gray-500 text-xs leading-relaxed max-w-md">Jasa desain pricelist, katalog produk, postingan promosi, banner, dan template sosial media</p>
+                                            <p className="text-gray-500 text-xs leading-relaxed">Jasa desain pricelist, katalog produk, postingan promosi, banner, dan template sosial media</p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto">
+                                    <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue whitespace-nowrap">IDR 35.000,-</span>
                                         <Link
                                             href={getWaLink("Social Media Desain Service")}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
                                         >
                                             ORDER
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -455,25 +457,25 @@ export default function PriceListPage() {
                             </div>
 
                             {/* Stream Branding Overlay Video */}
-                            <div className="bg-metal-gray/30 border border-gray-800/50 rounded-sm p-6 hover:border-electric-blue/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.05)] transition-all duration-300 group">
-                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                                    <div className="flex items-start sm:items-center gap-4 flex-1">
+                            <div className="bg-metal-gray/30 border border-gray-800/50 rounded-sm p-5 sm:p-6 hover:border-electric-blue/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.05)] transition-all duration-300 group">
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6">
+                                    <div className="flex items-start sm:items-center gap-4 w-full sm:flex-1">
                                         <svg className="w-6 h-6 text-electric-blue flex-shrink-0 mt-1 sm:mt-0" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                                         </svg>
                                         <div>
-                                            <h3 className="font-['Rajdhani'] font-bold text-xl text-white">STREAM BRANDING OVERLAY VIDEO</h3>
+                                            <h3 className="font-['Rajdhani'] font-bold text-lg sm:text-xl text-white">STREAM BRANDING OVERLAY VIDEO</h3>
                                             <p className="text-gray-400 text-xs font-['Rajdhani'] tracking-wider mb-2">Custom Logo • Store Icons • Mini Promo Overlay • Livestream Branding</p>
-                                            <p className="text-gray-500 text-xs leading-relaxed max-w-md">Elemen branding di layar livestream, termasuk logo kecil, badge, dan overlay promosi</p>
+                                            <p className="text-gray-500 text-xs leading-relaxed">Elemen branding di layar livestream, termasuk logo kecil, badge, dan overlay promosi</p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto">
+                                    <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue whitespace-nowrap">IDR 50.000,-</span>
                                         <Link
                                             href={getWaLink("Stream Branding Overlay Video")}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
                                         >
                                             ORDER
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -485,24 +487,24 @@ export default function PriceListPage() {
                             </div>
 
                             {/* Desain CV */}
-                            <div className="bg-metal-gray/30 border border-gray-800/50 rounded-sm p-6 hover:border-electric-blue/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.05)] transition-all duration-300 group">
-                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                                    <div className="flex items-start sm:items-center gap-4 flex-1">
+                            <div className="bg-metal-gray/30 border border-gray-800/50 rounded-sm p-5 sm:p-6 hover:border-electric-blue/50 hover:shadow-[0_0_20px_rgba(0,212,255,0.05)] transition-all duration-300 group">
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6">
+                                    <div className="flex items-start sm:items-center gap-4 w-full sm:flex-1">
                                         <svg className="w-6 h-6 text-electric-blue flex-shrink-0 mt-1 sm:mt-0" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                                         </svg>
                                         <div>
-                                            <h3 className="font-['Rajdhani'] font-bold text-xl text-white">DESAIN CV</h3>
+                                            <h3 className="font-['Rajdhani'] font-bold text-lg sm:text-xl text-white">DESAIN CV</h3>
                                             <p className="text-gray-500 text-xs font-['Rajdhani'] tracking-wider">ALL DESAIN BEBAS REQUEST</p>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto">
+                                    <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue whitespace-nowrap">IDR 15.000,-</span>
                                         <Link
                                             href={getWaLink("Desain CV")}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                                            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-4 py-3 sm:py-2 bg-electric-blue text-metal-dark font-['Rajdhani'] font-bold text-xs tracking-wider rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
                                         >
                                             ORDER
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Orbitron, Rajdhani } from "next/font/google";
 import "./globals.css";
 
@@ -15,6 +15,15 @@ const rajdhani = Rajdhani({
   display: "swap",
 });
 
+// 1. Konfigurasi Viewport khusus untuk mobile & in-app browser
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: '#0a0a0a', // Sesuai warna bg-metal-dark
+};
+
 export const metadata: Metadata = {
   title: "XashyDesign | Futuristic Design Studio",
   description: "Creative design studio specializing in futuristic digital experiences, overlay livestream, karakter animasi, dan desain grafis profesional.",
@@ -23,17 +32,9 @@ export const metadata: Metadata = {
   creator: "XashyDesign",
   openGraph: {
     title: "XashyDesign | Futuristic Design Studio",
-    description: "Creative design studio specializing in futuristic digital experiences, overlay livestream, karakter animasi, dan desain grafis profesional.",
-    url: "https://xashydesign.vercel.app", // Ganti dengan domain kamu nanti
+    description: "Creative design studio specializing in futuristic digital experiences",
+    url: "https://xashydesign.vercel.app",
     siteName: "XashyDesign",
-    images: [
-      {
-        url: "/og-image.jpg", // Buat gambar preview di public/og-image.jpg
-        width: 1200,
-        height: 630,
-        alt: "XashyDesign Preview",
-      },
-    ],
     locale: "id_ID",
     type: "website",
   },
@@ -41,11 +42,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "XashyDesign | Futuristic Design Studio",
     description: "Creative design studio specializing in futuristic digital experiences",
-    images: ["/og-image.jpg"],
   },
-  robots: {
-    index: true,
-    follow: true,
+  // 2. Mencegah iOS/TikTok auto-detect nomor HP jadi link yang merusak layout
+  other: {
+    'format-detection': 'telephone=no, date=no, address=no, email=no',
   },
 };
 

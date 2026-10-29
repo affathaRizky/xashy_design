@@ -69,16 +69,6 @@ export default function Navbar() {
                         ))}
                     </div>
 
-                    {/* CTA Button - Desktop Only */}
-                    <Link
-                        href="https://wa.me/6283171099307?text=Halo%20Min%2C%20mau%20order%20dong%21"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hidden md:inline-flex px-6 py-2.5 bg-electric-blue text-metal-dark font-orbitron font-bold text-sm rounded-sm hover:bg-electric-cyan hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300"
-                    >
-                        HIRE US
-                    </Link>
-
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}

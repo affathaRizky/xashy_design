@@ -10,8 +10,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
-      <Contact />   {/* <-- Ganti ini */}
-      <Footer />    {/* <-- Tambah ini */}
+      <Contact />
+      <Footer />
     </main>
   );
 }

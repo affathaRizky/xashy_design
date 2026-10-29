@@ -25,7 +25,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                     {/* Card 1: WhatsApp */}
                     <a
-                        href="https://wa.me/6283171099307"
+                        href="/redirect/whatsapp?project=nya"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-green-500/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden"
@@ -51,7 +51,7 @@ export default function Contact() {
 
                     {/* Card 2: Instagram */}
                     <a
-                        href="https://www.instagram.com/_xsdesign/"
+                        href="/redirect/instagram"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-pink-500/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden"
@@ -77,7 +77,7 @@ export default function Contact() {
 
                     {/* Card 3: TikTok */}
                     <a
-                        href="https://tiktok.com/@urfavsashy_"
+                        href="/redirect/tiktok"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative bg-gradient-to-b from-metal-gray/80 to-metal-dark border border-gray-800/50 rounded-sm p-8 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-1 overflow-hidden"

@@ -10,7 +10,7 @@ export default function PriceListPage() {
     return (
         <main className="min-h-screen relative overflow-x-hidden bg-metal-dark text-gray-200 font-['Inter']">
 
-            {/* Back Button (Optimized for Mobile) */}
+            {/* Back Button (TETAP PAKAI Link KARENA INI INTERNAL ROUTE) */}
             <Link
                 href="/"
                 className="fixed top-4 left-4 z-50 flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 sm:top-6 sm:left-6 bg-metal-dark/90 backdrop-blur-md border border-electric-blue/30 rounded-sm text-gray-400 hover:text-electric-blue hover:border-electric-blue/50 hover:shadow-[0_0_15px_rgba(0,212,255,0.3)] transition-all duration-300 group"
@@ -103,7 +103,7 @@ export default function PriceListPage() {
                                     </div>
                                 </div>
 
-                                {/* POINT TERAKHIR + TOMBOL ORDER */}
+                                {/* POINT TERAKHIR + TOMBOL ORDER (SUDAH DIUBAH KE <a>) */}
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                                     <div className="flex items-start gap-3 flex-1">
                                         <svg className="w-5 h-5 text-electric-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,7 +113,7 @@ export default function PriceListPage() {
                                             <span className="font-['Rajdhani'] font-semibold text-white">Landscape/Potrait</span>
                                         </div>
                                     </div>
-                                    <Link
+                                    <a
                                         href={getWaLink("Overlay Live Stream Basic")}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -123,7 +123,7 @@ export default function PriceListPage() {
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +168,7 @@ export default function PriceListPage() {
                                     </div>
                                 </div>
 
-                                {/* POINT TERAKHIR + TOMBOL ORDER */}
+                                {/* POINT TERAKHIR + TOMBOL ORDER (SUDAH DIUBAH KE <a>) */}
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                                     <div className="flex items-start gap-3 flex-1">
                                         <svg className="w-5 h-5 text-electric-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,7 +179,7 @@ export default function PriceListPage() {
                                             <span className="text-gray-500 ml-2">(Berlaku Kelipatan)</span>
                                         </div>
                                     </div>
-                                    <Link
+                                    <a
                                         href={getWaLink("Overlay Live Stream Advanced")}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -189,7 +189,7 @@ export default function PriceListPage() {
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@ export default function PriceListPage() {
                                     </div>
                                 </div>
 
-                                {/* POINT TERAKHIR + TOMBOL ORDER */}
+                                {/* POINT TERAKHIR + TOMBOL ORDER (SUDAH DIUBAH KE <a>) */}
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                                     <div className="flex items-start gap-3 flex-1">
                                         <svg className="w-5 h-5 text-electric-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -245,7 +245,7 @@ export default function PriceListPage() {
                                             <span className="text-gray-500 ml-2">(Berlaku Kelipatan)</span>
                                         </div>
                                     </div>
-                                    <Link
+                                    <a
                                         href={getWaLink("Overlay Live Stream Premium")}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -255,7 +255,7 @@ export default function PriceListPage() {
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +287,7 @@ export default function PriceListPage() {
                                 </div>
                                 <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                     <span className="font-['Orbitron'] font-bold text-xl sm:text-2xl text-electric-blue">IDR 40.000,-</span>
-                                    <Link
+                                    <a
                                         href={getWaLink("Gerakan Karakter Animasi (Random)")}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -297,7 +297,7 @@ export default function PriceListPage() {
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
 
@@ -316,7 +316,7 @@ export default function PriceListPage() {
                                 </div>
                                 <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                     <span className="font-['Orbitron'] font-bold text-xl sm:text-2xl text-electric-blue">IDR 55.000,-</span>
-                                    <Link
+                                    <a
                                         href={getWaLink("Gerakan Karakter Animasi (Request)")}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -326,7 +326,7 @@ export default function PriceListPage() {
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -382,7 +382,7 @@ export default function PriceListPage() {
                                     </div>
                                     <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue">IDR 40.000,-</span>
-                                        <Link
+                                        <a
                                             href={getWaLink("Overlay Photo")}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -392,7 +392,7 @@ export default function PriceListPage() {
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -411,7 +411,7 @@ export default function PriceListPage() {
                                     </div>
                                     <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue">IDR 40.000,-</span>
-                                        <Link
+                                        <a
                                             href={getWaLink("Desain Logo")}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -421,7 +421,7 @@ export default function PriceListPage() {
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -441,7 +441,7 @@ export default function PriceListPage() {
                                     </div>
                                     <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue whitespace-nowrap">IDR 35.000,-</span>
-                                        <Link
+                                        <a
                                             href={getWaLink("Social Media Desain Service")}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -451,7 +451,7 @@ export default function PriceListPage() {
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -471,7 +471,7 @@ export default function PriceListPage() {
                                     </div>
                                     <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue whitespace-nowrap">IDR 50.000,-</span>
-                                        <Link
+                                        <a
                                             href={getWaLink("Stream Branding Overlay Video")}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -481,7 +481,7 @@ export default function PriceListPage() {
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -500,7 +500,7 @@ export default function PriceListPage() {
                                     </div>
                                     <div className="flex flex-col sm:items-end gap-3 w-full sm:w-auto border-t sm:border-0 border-gray-700/50 pt-4 sm:pt-0 mt-2 sm:mt-0">
                                         <span className="font-['Orbitron'] font-bold text-xl text-electric-blue whitespace-nowrap">IDR 15.000,-</span>
-                                        <Link
+                                        <a
                                             href={getWaLink("Desain CV")}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -510,7 +510,7 @@ export default function PriceListPage() {
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg>
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

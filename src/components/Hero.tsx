@@ -39,6 +39,20 @@ export default function Hero() {
                     </a>
 
                     <a
+                        href="/pricelist"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex px-8 py-3 bg-electric-blue text-metal-dark font-orbitron font-bold rounded-sm hover:bg-electric-cyan transition-colors duration-300"
+                    >
+                        <span className="flex items-center gap-2">
+                            View Pricelist
+                            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a
                         href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDYzMTM0NDYyNDkyMTQ2?story_media_id=3932360717206749838_80053152698&stkn=MXF0bGkwYmZoNjljNQ=="
                         target="_blank"
                         rel="noopener noreferrer"
